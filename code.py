@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+'''
+This python file could do some git commands.
+'''
+__author__ = 'Group 14 of CS121, Data science programming, Lanzhou U'
+__copyright__ = 'copyright 2020, Lanzhou Uiversity'
+__email__ = ''
+__license__ = 'GPL V2 or later'
+
 
 from subprocess import Popen, PIPE, check_output
 
