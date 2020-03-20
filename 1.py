@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
 
-"""grab the unbuffered output from the git command
-   note the -P (no pager) the rest is just the git
-   command as you would use it on the commandline.
-   subprocess not only takes a command (here in cmd)
-   but also allows you to specify the directory in
-   which it will be exeucted (cwd means Change Working
-   Directory). The output of the git command here is
-   placed into a pipe that is then later read by
-   p.communicate - we could wait until the subprocess
-   completed (using p.wait()) but as we are reading
-   the results from a pipe we do not actually need to
-   do that here.
-   From the pipe we receive a byte-string not a string 
-   so we need to explicidly decode it here. Note that
-   we are ignoring the return value of p.communicate() """
-
+'''
+This python file could do some git commands.
+'''
+__author__ = 'Bofei Zhang in Group 14 of CS121, Data science programming, Lanzhou U'
+__copyright__ = 'copyright 2020, Lanzhou Uiversity'
+__email__ = 'zhangbf18@lzu.edu.cn'
+__license__ = 'GPL V2 or later'
+__version__ = '1.1'
 from subprocess import Popen, PIPE, check_output
 import numpy as np
 
