@@ -1,11 +1,11 @@
 "# groupwork14" 
+
+Team from LZU University. BE PROUD OF YOURSELF.
+
 The git repo of Lanzhou University data science programming workgroup14.
 
-can you read this message?😎
-
-I add another row!!!
+Zayn submits the first group work.
 
 
-I also add sth. I'm XiyuanChang.
 
-Zayn tries to understand Fork meaning.
+
