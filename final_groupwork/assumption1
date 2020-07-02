@@ -12,7 +12,6 @@ class Full_infor:
     def __init__(self,version='v4.4'):
         self.version = version
         self.repo = "C:\\Users\\17301\\Desktop\\linux-stable\\"
-        self.csv = "C:\\Users\\17301\\Desktop\\数据科学编程\\name.csv"
         self.name_set = set()
 
     def infor(self,set_name):
