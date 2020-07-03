@@ -1,0 +1,24 @@
+Assumption6：The new functions added by developers:
+lines added>0 lines deleted = 0 or use tags and regular expressions like "new functions" to count new functions they added. We assume that maybe more new functions developers add, more comprehensive the code is and more meticulous thoughts developers have.
+
+$ git log --grep="new function" --stat
+<snip>
+include/linux/bpf.h       |  10 ++-
+ include/linux/bpf_types.h |   2 +
+ include/linux/btf.h       |   5 ++
+ include/uapi/linux/bpf.h  |   1 +
+ kernel/bpf/btf.c          | 152 +++++++++++++++++++++++++++++++++++++++++++++-
+ kernel/bpf/syscall.c      |  15 ++++-
+ kernel/bpf/trampoline.c   |  41 ++++++++++++-
+ kernel/bpf/verifier.c     |  85 ++++++++++++++++++++------
+ 8 files changed, 283 insertions(+), 28 deletions(-)
+<snip>
+Chech the git log, found most of them are insertions is greater than deletions. But some exceptions exist as well, e.g.
+<snip>
+include/linux/zlib.h            |  6 ++++++
+ lib/zlib_deflate/deflate.c      |  6 ++++++
+ lib/zlib_deflate/deflate_syms.c |  1 +
+ lib/zlib_dfltcc/dfltcc.h        | 11 +++++++++++
+ lib/zlib_dfltcc/dfltcc_util.h   |  9 ---------
+<snip>
+dfltcc_util.h was deleted 9 lines.
