@@ -3,7 +3,7 @@ __author__ = 'Xiyuan Chang, group14, LZU University '
 __copyright__ = 'Copyright © 2020, Group 14, Xiyuan Chang'
 __email__='xychang2018@lzu.edu.cn'
 __license__ = "GPL V2"
-__version__ = 0.1
+__version__ = 0.2
 
 This code is to get the names, emails, start working time and recent submit time in Linux kernel of submitters who contibute code to kernel/sched/core.c.
 We want to use the eamil addresses to get their companies.
