@@ -12,7 +12,7 @@ Dan Williams <dan.j.williams@intel.com>
  wenxu <wenxu@ucloud.cn>
 Max Filippov <jcmvbkbc@gmail.com>
  Saeed Mahameed <saeedm@mellanox.com>
-<\snip>
+</snip>
 
 
 
