@@ -1,0 +1,5 @@
+Assumption5：The number of bugs fixed by developers
+$ git log | grep -c -E -e "^[[:space:]]+Fixes:"
+43626
+In all git commit, total number of fixes tag is 43626.
+Check some of their git log.
