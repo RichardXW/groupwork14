@@ -35,8 +35,7 @@ $ git log | grep "^Author: " | awk '{print $2}' | sort | uniq -c | sort -k1,1rn
 
 
 Assumption3：The frequency of commits:
-
-        e.g: 7 commits per month & only 9commits in a particular week. We assume that the second person submitted one file but there were many bugs so that this guy submitted other commits to fix the bug. The code quality may be bad. But the first person continues committing each month, we can assume this guy continues maintaining the kernel and the code quality may be high with fewer bugs.
+	e.g: 7 commits per month & only 9commits in a particular week. We assume that the second person submitted one file but there were many bugs so that this guy submitted other commits to fix the bug. The code quality may be bad. But the first person continues committing each month, we can assume this guy continues maintaining the kernel and the code quality may be high with fewer bugs.
 
 $ git log --pretty=format:"%ct" -1000
 
