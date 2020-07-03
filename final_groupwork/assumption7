@@ -1,0 +1,38 @@
+Assumption7：How long did it take to fix each bug
+There is a problem that git doesn’t tell us the bug process, so we cannot find the same bug directly by the git log. So we need the analysis of comment and extract the most important nouns. A every easy way to find the most important nouns is counting the frequency. 
+Then git log --grep=”WORD” to find the most initial git commit.
+$ git log | grep -E -e "^[[:space:]]+Fixes:"
+e.g. Fixes: 0aec4867dca14	
+<snip>
+I didn't know about messy programs like svgatextmode...  Couldn't this be
+    integrated in some linux/drivers/video/console/svgacon.c ?...  So because
+    of the existence of the svgatextmode program, the kernel is not supposed to touch to CRT_OVERFLOW/SYNC_END/DISP/DISP_END/OFFSET ?
+………
+Disabling the check in vgacon_resize() might help indeed, but I'm really
+    not sure whether it will work for any chipset: in my patch, CRT registers
+    are set at each console switch, since stty rows/cols apply to consoles
+    separately...
+<snip>
+
+Try some key words, e.g. vgacon_resize, svgatextmode.
+
+$ git log --grep="vgacon_resize" --pretty=format:"%h %ct" |sort -k2 -r
+<snip>
+d0f73520b378 1427381367
+f80561e4d1f9 1403223759
+0aec4867dca1 1129564750
+6d36ba629e0e 1126797849
+<snip>
+$ git log 6d36ba629e0e
+<snip>
+[PATCH] vgacon: Fix sanity checking in vgacon_resize
+    "I routinely switch the console font during bootup to
+    8x8 so I can get 50 lines per screen.  Until 09 Sept,
+    just changing to the small font automatically gave me
+    all 50 lines -- but now I'm only getting 25 lines even
+    with the small font.  The bottom half of the screen
+    displays the text that already scrolled off the top."
+<snip>
+I cannot compare the two commits are talking about the same bug.
+The fact is I cannot figure out the key words,  some key words is not in the original bug.
+
