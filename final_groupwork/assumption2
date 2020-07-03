@@ -1,0 +1,11 @@
+Assumption2：The total commits of developers
+$ git log | grep "^Author: " | awk '{print $2}' | sort | uniq -c | sort -k1,1rn
+<snip>
+  32842 Linus
+  25345 David
+  11214 Paul
+	……………
+      1 张君
+      1 张忠山
+      1 이건호
+<snip>
