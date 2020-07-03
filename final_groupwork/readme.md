@@ -15,7 +15,9 @@ Max Filippov <jcmvbkbc@gmail.com>
 <snip>
 
 
+
 Assumption3: Frequency of commit
+
 We think timestamp is a good way to do this. Using timestamp, we can change it into local time in anywhere with python.
 Because we want to submit the frequency, so subtract the adjacent timestamp to get the time interval. 
 If it is in hours, it is divided by 3600; if it is in days, it is divided by 3600*24. 
