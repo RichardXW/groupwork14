@@ -1,4 +1,5 @@
 Assumption1:The companies or organizations where developers work.
+
 $ git log | grep -E -e "<(\\w+)(\\.\\w+)*(\\@\\w+){1}(\\.[a-z]{2,3}){1,2}>" | cut -f 2 -d ":" | uniq
 
 <snip>
@@ -14,4 +15,9 @@ Max Filippov <jcmvbkbc@gmail.com>
 <snip>
 
 
+Assumption3: Frequency of commit
+We think timestamp is a good way to do this. Using timestamp, we can change it into local time in anywhere with python.
+Because we want to submit the frequency, so subtract the adjacent timestamp to get the time interval. 
+If it is in hours, it is divided by 3600; if it is in days, it is divided by 3600*24. 
+To minimize the sample size, we just use first 100 git commit as example.
 
