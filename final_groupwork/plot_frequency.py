@@ -3,6 +3,10 @@
 from matplotlib import pyplot as plt
 import pandas as pd
 
+__author__ = 'Zunye Tang, group14, LZU University '
+__copyright__ = 'Copyright © 2020, Group 14, Zunye Tang'
+__license__ = "GPL V2"
+__version__ = 0.1
 
 with open("timestamp.txt","r") as f:
     data = f.read()
