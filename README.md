@@ -2,10 +2,11 @@
 
 ## Team from LZU University. BE PROUD OF YOURSELF.
 
-ok, it's a markdown formular file *.md
-
-The git repo of Lanzhou University data science programming workgroup14.
-
-
+Group Number：
+Xiangwen Qiao：
+Xiyuan Chang:
+Bofei Zhang:
+Wenyao Chen:
+Zunye Tang:
 
 
