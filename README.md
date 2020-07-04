@@ -1,7 +1,7 @@
 # groupwork14 
 
 ## Team from LZU University. 
-## Push Hard, get more.
+## Push harder, get more.
 
 Group Number：
 
