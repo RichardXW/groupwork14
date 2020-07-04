@@ -1,0 +1,51 @@
+Name,Last,start,emails,company,duration(day),Commit_times,Score
+Thomas Gleixner,2020/2/20,2005/5/23,tglx@linutronix.de,linutronix,5386,9362,97
+Rusty Russell,2018/1/15,2005/7/21,rusty@rustcorp.com.au,OzLabs,4561,8104,87
+Arnaldo Carvalho,2020/2/27,2005/4/16,acme@redhat.com,Red Hat,5430,3654,95
+Linus Torvalds,2020/3/8,2005/4/16,torvalds@linux-foundation.org,OSDL,5440,32842,100
+Paolo Bonzini,2020/2/28,2009/8/24,pbonzini@redhat.com,Red Hat,3840,1674,85
+David Howells,2020/2/7,2005/4/18,dhowells@redhat.com,Red Hat,5408,25345,99
+Eric W,2019/11/26,2005/5/23,ebiederm@xmission.com,XMission ,5300,10322,98
+Mel Gorman,2020/3/6,2006/9/27,mgorman@suse.de,SUSE,4909,689,80
+Jens Axboe,2020/3/6,2005/4/16,axboe@kernel.dk,Fusion-IO,5438,2292,94
+Rafael J,2020/3/6,2005/5/5,Wysocki rafael.j.wysocki@intel.com,Intel,5419,3725,95
+Ingo Molnar,2020/2/29,2005/4/18,mingo@kernel.org,Red Hat ,5430,5887,97
+Peter Anvin,2018/11/8,2005/5/1,hpa@linux.intel.com,Intel,4939,2376,87
+Marcelo Tosatti,2019/12/9,2005/4/26,mtosatti@redhat.com,Red Hat,5340,589,83
+James Morris,2020/2/10,2005/4/16,jmorris@namei.org,Microsoft,5413,6972,96
+Paul E,2020/2/7,2005/4/16,paulmck@linux.vnet.ibm.com,IBM,5410,4322,95
+Herbert Xu,2020/1/16,2005/4/16,herbert@gondor.apana.org.au,Apache,5388,1890,90
+Paul Gortmaker,2019/5/8,2005/9/23,paul.gortmaker@windriver.com,Wind River,4975,1356,84
+Tejun Heo,2020/1/30,2005/4/16,tj@kernel.org,Red Hat,5402,4211,95
+Frederic Weisbecker,2020/1/7,2008/10/3,fweisbec@gmail.com,Google,4113,1246,83
+Al Viro,2020/2/7,2005/4/20,viro@zeniv.linux.org.uk,OSDL,5406,6741,98
+Martin Schwidefsky,2019/9/13,2005/5/1,schwidefsky@de.ibm.com,Ibm,5248,3233,93
+Gleb Natapov,2014/1/9,2005/7/27,gleb@redhat.com,Red Hat,3088,382,76
+Jan Kara,2020/2/25,2005/4/16,jack@suse.cz,SUSE,5428,4038,94
+Jan Schmidt,2019/10/4,2011/10/23,jan@centricular.com,Centricular,2903,116,50
+Jan-Benedict Glaw,2012/5/24,2011/5/12,jbglaw@lug-owl.de,LUG-OWL ,378,7,20
+Jani Nikula,2020/2/26,2009/1/7,jani.nikula@intel.com,Intel,4067,1292,82
+Jarkko Lavinen,2011/3/11,2005/5/23,jarkko.lavinen@nokia.com,Nokia,2118,740,82
+Jarkko Sakkinen,2020/2/17,2010/12/7,jarkko.sakkinen@linux.intel.com,Intel,3359,193,57
+Jaroslav Kysela,2020/1/23,2005/5/29,perex@perex.cz,Perex,5352,264,63
+Jason Cooper,2018/7/2,2008/11/13,jason@lakedaemon.net,lakedaemon,3518,2100,86
+Jason Wessel,2017/12/6,2005/12/20,jason.wessel@windriver.com,Wind River,4369,215,61
+Jassi Brar,2020/3/15,2009/11/6,jaswinder.singh@linaro.org,Linaro ,3782,204,57
+Jaswinder Singh,2012/2/29,2008/7/14,jaswinder.singh@linaro.org,Linaro ,1325,457,69
+Jaswinder Singh Rajput,2010/10/26,2008/12/27,jaswinder@infradead.org,infradead,668,404,70
+Jean Delvare,2020/3/26,2005/4/18,jdelvare@suse.de,SUSE,5456,2043,85
+Jean-Christophe PLAGNIOL-VILLARD,2015/1/26,2009/4/27,plagnioj@jcrosoft.com,Jcrosoft,2100,314,64
+Jeff Garzik,2016/6/20,2005/5/1,jeff@garzik.org,Garzik,4068,725,84
+Jeff Kirsher,2020/1/9,2005/12/13,jeffrey.t.kirsher@intel.com,Intel,5140,4422,93
+Jeff Layton,2020/1/27,2007/5/5,jlayton@kernel.org,Red Hat ,4650,1533,87
+Jeff Mahoney,2020/2/19,2005/6/29,jeffm@suse.com,SUSE,5348,431,83
+Jens Axboe,2020/3/25,2005/4/16,axboe@kernel.dk,Red Hat ,5457,2294,86
+Jeremy Fitzhardinge,2013/8/9,2005/5/29,jeremy@goop.org,Goop,2994,1411,79
+Jeremy Kerr,2019/11/8,2006/4/29,jk@ozlabs.org,OzLabs,4941,218,63
+Jesper Juhl,2014/2/9,2005/4/18,jj@chaosbits.net,Chaosbits,3219,1427,81
+Jesper Nilsson,2018/3/16,2007/11/6,jespern@axis.com,AXIS,3783,337,66
+Jesse Barnes,2016/3/21,2005/4/25,jbarnes@virtuousgeek.org,Virtuous,3983,1822,83
+Jesse Brandeburg,2019/11/22,2005/11/18,jesse.brandeburg@intel.com,Intel,5117,542,75
+Jesse Gross,2016/3/20,2010/10/21,jesse@nicira.com,Vmware,1977,84,50
+Jiang Liu,2016/1/15,2012/2/3,jiang.liu@linux.intel.com,Intel,1442,713,73
+Jianwei Wang,2015/8/19,2015/8/19,jianwei.wang.chn@gmail.com,Google,0,1,0
