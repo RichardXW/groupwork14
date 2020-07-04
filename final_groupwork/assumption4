@@ -1,2 +1,0 @@
-Assumption4：The number of bugs created by developers
-$ git log --oneline --grep="reported-by:"  -i | wc -l
