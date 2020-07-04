@@ -1,0 +1,44 @@
+Matrix: eight indicators of level of developers.(ps: we donot use all of them).
+
+Indicator1：The companies or organizations where developers work.
+$ git log | grep -E -e "<(\\w+)(\\.\\w+)*(\\@\\w+){1}(\\.[a-z]{2,3}){1,2}>" | cut -f 2 -d ":" | uniq
+
+
+Indicator2：The total commits of developers
+$ git log | grep "^Author: " | awk '{print $2}' | sort | uniq -c | sort -k1,1rn
+
+
+Indicator3:The frequency of commits
+$ git log --pretty=format:"%ct" -1000
+We think timestamp is a good way to do this. Using timestamp, we can change it into local time in anywhere with python. 
+Because we want to submit the frequency, so subtract the adjacent timestamp to get the time interval. 
+If it is in hours, it is divided by 3600; if it is in days, it is divided by 3600*24. To minimize the sample size, we just use first 100 git commit as example.
+
+
+Indicator4：The number of bugs created by developers
+$ git log --oneline --grep="reported-by:"  -i | wc -l
+
+
+Indicator5：The number of bugs fixed by developers
+$ git log | grep -c -E -e "^[[:space:]]+Fixes:"
+43626
+
+
+
+Indicator6：The new functions added by developers
+lines added>0 lines deleted = 0 or use tags and regular expressions like "new functions" to count new functions they added. 
+We assume that maybe more new functions developers add, more comprehensive the code is and more meticulous thoughts developers have.
+$ git log --grep="new function" --stat
+
+
+Indicator7：How long did it take to fix each bug
+There is a problem that git doesn’t tell us the bug process, so we cannot find the same bug directly by the git log. 
+So we need the analysis of comment and extract the most important nouns. A every easy way to find the most important nouns is counting the frequency. 
+Then git log --grep=”WORD” to find the most initial git commit.
+$ git log | grep -E -e "^[[:space:]]+Fixes:"
+This indicator is still not for sure, because we cannot get the original bug for 100%.
+So we donot use this indicator as an independent variable.
+
+
+Indicator8：The number of commits on linux kernel patch level:
+$ for V in `git tag | grep v4.4 | sort -n -k3 -t "." `;do echo "$V:"; git log $V | wc -l; done

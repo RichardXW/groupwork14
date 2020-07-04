@@ -1,2 +1,0 @@
-Assumption8：The number of commits on linux kernel patch level:
-$ for V in `git tag | grep v4.4 | sort -n -k3 -t "." `;do echo "$V:"; git log $V | wc -l; done
