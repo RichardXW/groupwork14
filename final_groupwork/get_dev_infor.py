@@ -3,7 +3,7 @@
 import pandas as pd
 import subprocess
 
-__author__ = "Zunye Tang, Xiangwen Qiao, Wenyao Chen, Bofei Zhang Data Scicence, LZU University "
+__author__ = "Zunye Tang, Xiyuan Chang Xiangwen Qiao, Wenyao Chen, Bofei Zhang Data Scicence, LZU University "
 __copyright__ = "Copyright © 2020, Group 14, Zunye Tang"
 __version__ = 0.2
 
