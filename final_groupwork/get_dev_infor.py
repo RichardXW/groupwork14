@@ -18,14 +18,14 @@ class Infor:
 
     def infor_(self,set_name):
         ls = []
-        cmd1 = 'git log --pretty=format:"%an,%cd,% ae" --author="'
+        cmd1 = 'git log --pretty=format:"%an,% ae" --author="'
         cmd2 = '" -1 --date=short'
         for i in set_name:
             cmd = cmd1 + i + cmd2
             get_name_infor = self.get_developer_name(cmd)
             get_name_infor = get_name_infor.communicate()[0].decode("utf-8").split(",")
             ls.append(get_name_infor)
-            df = pd.DataFrame(ls,columns=["name", "commit_time", "email"])
+            df = pd.DataFrame(ls)
         return df
 
 
@@ -39,16 +39,20 @@ class Infor:
                          shell=True)
 
     def get_time(self,dataframe):
+        last_ls = []
+        start_ls = []
         for i in self.name_set:
-            cmd = 'git log --pretty=format:"%cd" --author="%s"' % (
-                i) + " -1 --date=short"
+            cmd = 'git log --pretty=format:"%cd" --author="' + i + "\" -1 --date=short"
             p = subprocess.Popen(cmd, cwd=self.repo, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, shell=True)
             last = p.communicate()[0]
-            cmd2 = 'git log -1 --pretty=format:"%cd" --author="%s"' % (
-                i) + " --reverse --date=short"
-            p2 = subprocess.Popen(cmd, cwd=self.repo, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, shell=True)
-            start = p.communicate()[0]
-            dataframe = pd.concat([dataframe,last,start],axis=1,ignore_index=True)
+            last_ls.append(last.decode("utf-8").split("\n"))
+            cmd2 = 'git log -1 --pretty=format:"%cd" --author="' + i + "\" --reverse --date=short"
+            p2 = subprocess.Popen(cmd2, cwd=self.repo, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, shell=True)
+            start = p2.communicate()[0]
+            start_ls.append(start.decode("utf-8").split("\n"))
+        tmp1 = pd.DataFrame(last_ls)
+        tmp2 = pd.DataFrame(start_ls)
+        dataframe = pd.concat([dataframe,tmp1,tmp2],axis=1,ignore_index=True)
         return dataframe
 
 
@@ -62,8 +66,11 @@ class Infor:
             self.name_set.add(name)
         df = self.infor_(self.name_set)
         df2 = self.get_time(df)
+        df2.columns=["name","email","last_commit","first_commit"]
         return df2
 
 
 infor = Infor().run()
 print(infor)
+
+
